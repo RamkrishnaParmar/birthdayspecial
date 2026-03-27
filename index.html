@@ -179,6 +179,16 @@
     var intervalContent;
     var intervalTitle;
     $("#btn__letter").on("click", function(){
+
+    if (navigator.vibrate) {
+        navigator.vibrate(100);
+    }
+
+    $(".box__letter").slideDown()
+
+    setTimeout(function(){
+        $(".letter__border").slideDown();
+    },1000)
         $(".box__letter").slideDown()
         setTimeout(function(){
             $(".letter__border").slideDown();
